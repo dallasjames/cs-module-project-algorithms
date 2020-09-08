@@ -6,8 +6,18 @@ Returns: a List of integers
 
 def sliding_window_max(nums, k):
     # Your code here
-
-    pass
+    maxi = []
+    tempi = []
+    if len(nums) < k:
+        return False
+    for i in range(k):
+        tempi.append(nums[i])
+    maxi.append(max(tempi))
+    for j in range(k, len(nums)):
+        tempi.pop(0)
+        tempi.append(nums[j])
+        maxi.append(max(tempi))
+    return maxi
 
 
 if __name__ == '__main__':
