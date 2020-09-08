@@ -6,8 +6,14 @@ Returns: a List of integers
 
 def moving_zeroes(arr):
     # Your code here
-
-    pass
+    right = []
+    left = []
+    for i in range(len(arr)):
+        if arr[i] == 0:
+            right.append(arr[i])
+        else:
+            left.append(arr[i])
+    return left + right
 
 
 if __name__ == '__main__':
