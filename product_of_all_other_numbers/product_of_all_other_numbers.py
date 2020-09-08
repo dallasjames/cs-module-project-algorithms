@@ -6,9 +6,12 @@ Returns: a List of integers
 
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
-
+    count = 1
+    for i in arr:
+        count *= i
+    for i in range(len(arr)):
+        arr[i] = int(count/arr[i])
+    return arr
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
