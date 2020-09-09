@@ -6,14 +6,13 @@ Returns: a List of integers
 
 def moving_zeroes(arr):
     # Your code here
-    right = []
-    left = []
+    newArr = []
     for i in range(len(arr)):
         if arr[i] == 0:
-            right.append(arr[i])
+            newArr.append(arr[i])
         else:
-            left.append(arr[i])
-    return left + right
+            newArr.insert(0, arr[i])
+    return newArr
 
 
 if __name__ == '__main__':
